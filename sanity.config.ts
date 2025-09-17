@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: ['@sanity/vision'],
   schema: {
     types: [
-      schemaTypes
+      ...schemaTypes
            ] // Schema types will be imported from src/schemas
   },
   studio: {
