@@ -3,12 +3,12 @@ import schemaTypes from './src/schemas'   // if sanity.config.ts is in the root
 
 
 export default defineConfig({
-  projectId: 'your-project-id', // Replace with your Sanity project ID
+  projectId: 'am22ijkm', // Replace with your Sanity project ID
   dataset: 'production',
   plugins: ['@sanity/vision'],
   schema: {
     types: [
-      ...schemaTypes
+      schemaTypes
            ] // Schema types will be imported from src/schemas
   },
   studio: {
