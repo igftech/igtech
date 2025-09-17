@@ -1,18 +1,14 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from '../src/schemas'
+import { defineConfig } from '@sanity/cli';
+import { schemaTypes } from './src/schemas';
 
 export default defineConfig({
-  name: 'igiehon-foundation',
-  title: 'Igiehon Foundation CMS',
-
-  projectId: 'am22ijkm', // Replace with your actual Sanity project ID
+  projectId: 'am22ijkm', // Replace with your Sanity project ID
   dataset: 'production',
-
-  plugins: [structureTool(), visionTool()],
-
+  plugins: ['@sanity/vision'],
   schema: {
-    types: schemaTypes,
+    types: schemaTypes
   },
-})
+  studio: {
+    basePath: '/studio'
+  }
+});
